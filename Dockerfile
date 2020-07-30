@@ -1,4 +1,4 @@
-FROM microblinkdev/clang-devenv:10.0.0 AS original
+FROM microblinkdev/clang-devenv:10.0.1 AS original
 
 FROM centos:8
 
