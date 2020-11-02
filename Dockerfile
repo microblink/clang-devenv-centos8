@@ -48,13 +48,15 @@ RUN ln -s /usr/local/bin/clang   /usr/bin/clang   && \
     ln /usr/local/bin/llvm-ranlib /usr/bin/ranlib && \
     ln -s /usr/local/bin/ccache   /usr/bin/ccache
 
-ENV CC="/usr/local/bin/clang"           \
-    CXX="/usr/local/bin/clang++"        \
-    AR="/usr/local/bin/llvm-ar"         \
-    NM="/usr/local/bin/llvm-nm"         \
-    RANLIB="/usr/local/bin/llvm-ranlib" \
-    NINJA_STATUS="[%f/%t %c/sec] "      \
-    LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64"
+ENV CC="/usr/local/bin/clang"                           \
+    CXX="/usr/local/bin/clang++"                        \
+    AR="/usr/local/bin/llvm-ar"                         \
+    NM="/usr/local/bin/llvm-nm"                         \
+    RANLIB="/usr/local/bin/llvm-ranlib"                 \
+    NINJA_STATUS="[%f/%t %c/sec] "                      \
+    LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64"   \
+    ANDROID_SDK_ROOT="/home/android-sdk"                \
+    PATH="${PATH}:/home/android-sdk/platform-tools"
 
 # download and install latest chrome
 RUN cd /home && \
