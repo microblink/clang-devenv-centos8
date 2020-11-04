@@ -7,7 +7,7 @@ COPY --from=original /home /home/
 
 # install LFS and setup global .gitignore for both
 # root and every other user logged with -u user:group docker run parameter
-RUN yum -y install openssh-clients glibc-devel java-devel zip bzip2 make perl-Digest-MD5 perl-JSON && \
+RUN yum -y install openssh-clients glibc-devel java-devel zip bzip2 make perl-Digest-MD5 perl-JSON libXScrnSaver.x86_64 && \
     git lfs install && \
     echo "~*" >> /.gitignore_global && \
     echo ".DS_Store" >> /.gitignore_global && \
